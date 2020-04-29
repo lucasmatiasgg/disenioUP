@@ -16,7 +16,13 @@ public class Test {
 		CC.transferir(CA2, 20.0);
 		//CA.transferir(CA2, 10.0);
 		
-		
+		/* Este bloque se usa para testear el objectNull
+		try {
+			testNull.transferir(CA2, 100.00);
+		}catch (Exception e) {
+			throw new RuntimeException("Error correcto de objeto nulo");
+		}
+		*/
 		
 		System.out.println(CC.getSaldo());
 		System.out.println(CA2.getSaldo());
