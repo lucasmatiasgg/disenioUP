@@ -10,9 +10,7 @@ public class Semaforo {
 		this.estado = estado;
 	}
 	
-	public void mostrar() {
-		estado.mostrar();
+	public String mostrar() {
+		return estado.mostrar();
 	}
 }
-
-//ver de cambiar los estados "internamente" que pegue la vuelta.
