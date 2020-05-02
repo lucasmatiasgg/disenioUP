@@ -1,4 +1,5 @@
+import java.util.ArrayList;
 
 public interface IGrupo {
-	public void enviar(String mensaje, Persona emisor);
+	public ArrayList<String> enviar(String mensaje, Persona emisor);
 }

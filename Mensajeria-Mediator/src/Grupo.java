@@ -1,16 +1,20 @@
+import java.awt.List;
 import java.util.ArrayList;
 
 public class Grupo implements IGrupo{
 	
 	private ArrayList<Persona> personas = new ArrayList<Persona>();
+	private ArrayList<String> mensajes;
 	
 	@Override
-	public void enviar(String mensaje, Persona emisor) {
+	public ArrayList<String> enviar(String mensaje, Persona emisor) {
+		mensajes = new ArrayList<String>();
 		for(Persona persona : personas) {
 			if(persona != emisor) {
-				persona.recibir(mensaje);
+				mensajes.add(persona.recibir(mensaje)); 
 			}
 		}
+		return mensajes;
 	}
 	
 	public void add(Persona persona) {

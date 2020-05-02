@@ -1,7 +1,10 @@
+import java.util.ArrayList;
 
 public class Test {
 
 	public static void main(String[] args) {
+		
+		ArrayList<String> mensajeLeido = new ArrayList<String>();
 		
 		Grupo grupoFacu = new Grupo();
 		Grupo grupoCasa = new Grupo();
@@ -19,9 +22,16 @@ public class Test {
 		grupoCasa.add(jose);
 		grupoCasa.add(luis);
 		
-		lucas.enviar("Hola grupo de la facu");
+		mensajeLeido = lucas.enviar("Hola grupo de la facu");		
+		for(String mensaje : mensajeLeido) {
+			System.out.println(mensaje);
+		}
 		
-		jose.enviar("Hola gente de casa");
+		//Hago una prueba con un grupo diferente.
+		mensajeLeido = jose.enviar("Hola gente de casa");		
+		for(String mensaje : mensajeLeido) {
+			System.out.println(mensaje);
+		}
 	}
 
 }

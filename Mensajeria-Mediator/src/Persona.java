@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Persona {
 	protected IGrupo grupo;
@@ -10,12 +11,12 @@ public class Persona {
 		nombre = nom;
 	}
 	
-	public void enviar(String mensaje) {
-		grupo.enviar(mensaje, this);
+	public ArrayList<String> enviar(String mensaje) {
+		return grupo.enviar(mensaje, this);
 	}
 	
-	public void recibir(String mensaje) {
-		System.out.println(this.getNombre() + " está leyendo: "+ mensaje);
+	public String recibir(String mensaje) {
+		return (this.getNombre() + " está leyendo: "+ mensaje);
 	}
 	
 	public IGrupo getGrupo() {
