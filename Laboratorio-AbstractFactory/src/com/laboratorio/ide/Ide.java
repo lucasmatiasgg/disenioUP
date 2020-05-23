@@ -5,7 +5,6 @@ public class Ide {
 	private String version;
 	
 	public Ide() {
-		
 	}
 
 	public String getNombre() {
@@ -22,6 +21,10 @@ public class Ide {
 
 	public void setVersion(String version) {
 		this.version = version;
+	}
+	
+	public String toString() {
+		return "Nombre del IDE: " + getNombre() + " Version: " + getVersion();
 	}
 	
 }

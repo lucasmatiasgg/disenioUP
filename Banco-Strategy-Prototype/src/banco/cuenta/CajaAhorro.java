@@ -1,7 +1,19 @@
+package banco.cuenta;
 
 public class CajaAhorro implements Cuenta{
 	
 	private Double saldo;
+	
+	public CajaAhorro() {
+	}
+	
+	public CajaAhorro clone() {
+		CajaAhorro ca = new CajaAhorro();
+		ca.setSaldo(getSaldo());
+		
+		return ca;
+	}
+	
 	
 	@Override
 	public void transferir(Cuenta destino, double monto) {
@@ -16,7 +28,11 @@ public class CajaAhorro implements Cuenta{
 		}
 		
 	}
-
+	
+	public String toString() {
+		return "Saldo actual: " + getSaldo();
+	}
+	
 	@Override
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;	

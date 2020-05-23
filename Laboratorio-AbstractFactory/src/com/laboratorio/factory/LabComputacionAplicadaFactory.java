@@ -8,6 +8,8 @@ import com.laboratorio.sistemaOperativo.SistemaOperativo;
 
 public class LabComputacionAplicadaFactory implements LaboratorioAbsFactory{
 
+	private static LabComputacionAplicadaFactory instance;
+	
 	@Override
 	public Lenguaje crearLenguaje(Lenguaje c) {
 		return new C(c.getName(), c.getVersion());
@@ -21,6 +23,13 @@ public class LabComputacionAplicadaFactory implements LaboratorioAbsFactory{
 	@Override
 	public Ide crearIde() {
 		return new Codeblocks();
+	}
+	
+	public static LabComputacionAplicadaFactory getInstance() {
+		if(instance == null) {
+			return new LabComputacionAplicadaFactory();
+		}
+		return instance;
 	}
 
 }
