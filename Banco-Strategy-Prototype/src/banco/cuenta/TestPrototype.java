@@ -26,10 +26,9 @@ public class TestPrototype {
 		paqueteDeJuan.setTitular("Juan");
 		
 		
-		
-		
+		//Cambio atributos del primer paquete para testear las referencias del clonado.
 		paqueteGold.getCajaAhorro().setSaldo(1900);
-		
+		paqueteGold.setTitular("NuevoTitutar");
 		
 		
 		
