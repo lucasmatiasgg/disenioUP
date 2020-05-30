@@ -4,6 +4,9 @@ public class CajaAhorroDolares implements Cuenta{
 	
 	private Double saldo;
 	
+	public CajaAhorroDolares() {
+	}
+	
 	public CajaAhorroDolares clone() {
 		CajaAhorroDolares cd = new CajaAhorroDolares();
 		cd.setSaldo(getSaldo());

@@ -19,8 +19,6 @@ public class TestPrototype {
 		paqueteGold.setCajaAhorro(ca);
 		paqueteGold.setTarjeta(tarjeta);
 		paqueteGold.setTitular("Pepe");
-		
-		
 	
 		Gold paqueteDeJuan = paqueteGold.clone();
 		paqueteDeJuan.setTitular("Juan");
@@ -29,8 +27,6 @@ public class TestPrototype {
 		//Cambio atributos del primer paquete para testear las referencias del clonado.
 		paqueteGold.getCajaAhorro().setSaldo(1900);
 		paqueteGold.setTitular("NuevoTitutar");
-		
-		
 		
 		System.out.println(paqueteGold);
 		System.out.println("\n------------------------------------\n");

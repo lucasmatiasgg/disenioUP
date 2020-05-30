@@ -12,10 +12,10 @@ public class Laboratorio {
 	private SistemaOperativo so;
 	private Ide ide;
 	
-	public Laboratorio(LaboratorioAbsFactory factory, Lenguaje lenguaje, SistemaOperativo so, Ide ide) {
-		this.lenguaje = factory.crearLenguaje(lenguaje);
-		this.so = factory.crearSO(so);
-		this.ide = factory.crearIde();
+	public Laboratorio(Lenguaje lenguaje, SistemaOperativo so, Ide ide) {
+		this.lenguaje = lenguaje;
+		this.so = so;
+		this.ide = ide;
 	}
 	
 	public String toString() {

@@ -6,6 +6,10 @@ public class Ide {
 	
 	public Ide() {
 	}
+	public Ide(String nombre, String version) {
+		this.nombre = nombre;
+		this.version = version;
+	}
 
 	public String getNombre() {
 		return nombre;

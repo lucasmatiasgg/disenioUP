@@ -11,18 +11,18 @@ public class LabComputacionAplicadaFactory implements LaboratorioAbsFactory{
 	private static LabComputacionAplicadaFactory instance;
 	
 	@Override
-	public Lenguaje crearLenguaje(Lenguaje c) {
-		return new C(c.getName(), c.getVersion());
+	public Lenguaje crearLenguaje(String nombre, String version) {
+		return new C(nombre, version);
 	}
 
 	@Override
-	public SistemaOperativo crearSO(SistemaOperativo so) {
-		return new Linux(so.getName(), so.getVersion(), so.getAnio());
+	public SistemaOperativo crearSO(String nombre, String version, int anio) {
+		return new Linux(nombre, version, anio);
 	}
 
 	@Override
-	public Ide crearIde() {
-		return new Codeblocks();
+	public Ide crearIde(String nombre, String version) {
+		return new Codeblocks(nombre, version);
 	}
 	
 	public static LabComputacionAplicadaFactory getInstance() {

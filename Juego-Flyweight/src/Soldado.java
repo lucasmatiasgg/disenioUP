@@ -8,7 +8,8 @@ public class Soldado {
 	private JugadorFly soldadoFly;
 	
 	public Soldado(String key, FlyFactory factory) {
-		this.soldadoFly = factory.getFly(key);
+		
+		this.soldadoFly = factory.getFly(FlyFactory.SOLDADO_100);
 		this.vidaActual = soldadoFly.getVidaTotal();
 	}
 	

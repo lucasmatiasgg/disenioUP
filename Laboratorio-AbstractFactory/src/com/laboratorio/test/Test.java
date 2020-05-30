@@ -23,16 +23,25 @@ public class Test {
 									.addVersion("2020-03")
 									.build();
 	
+		
+		
 		LabDisenioFactory labDisenio = LabDisenioFactory.getInstance();
 		LabComputacionAplicadaFactory labComputacion = LabComputacionAplicadaFactory.getInstance();
 		
 		
-		Laboratorio aulaDisenio = new Laboratorio(labDisenio, java, win, idea);
+		Laboratorio aulaDisenio = new Laboratorio(labDisenio.crearLenguaje(java.getName(),java.getVersion()), 
+													labDisenio.crearSO(win.getName(), win.getVersion(), win.getAnio()),
+													labDisenio.crearIde(idea.getNombre(), idea.getVersion()));		
 		aulaDisenio.setName("Laboratorio de Diseño");
-		System.out.println(aulaDisenio);
 		
-		Laboratorio aulaComputacion = new Laboratorio(labComputacion, c, linux, idea);
+		
+		Laboratorio aulaComputacion = new Laboratorio(labComputacion.crearLenguaje(c.getName(), c.getVersion()),
+													labComputacion.crearSO(linux.getName(), linux.getVersion(), linux.getAnio()),
+													labComputacion.crearIde("Codeblocks", "2.0"));		
 		aulaComputacion.setName("Aula de computacion aplicada");
+		
+		
+		System.out.println(aulaDisenio);
 		System.out.println(aulaComputacion);
 	}
 

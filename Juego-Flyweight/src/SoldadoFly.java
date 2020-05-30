@@ -4,13 +4,9 @@ public class SoldadoFly implements JugadorFly{
 	private int vidaTotal;
 	private int ataque;
 	private int defensa;
-	private String clave;
 	
-	public SoldadoFly(){		
-	}
 	
-	public SoldadoFly(String clave) {
-		this.clave = clave;
+	public SoldadoFly() {
 		this.vidaTotal = 100;
 		this.ataque = 10;
 		this.defensa = 5;

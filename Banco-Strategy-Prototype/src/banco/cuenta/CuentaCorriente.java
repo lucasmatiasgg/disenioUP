@@ -5,6 +5,9 @@ public class CuentaCorriente implements Cuenta{
 	private double saldo;
 	private double porcentaje = 2;
 	
+	public CuentaCorriente() {
+	}
+	
 	public CuentaCorriente clone() {
 		CuentaCorriente cc = new CuentaCorriente();
 		cc.setSaldo(getSaldo());

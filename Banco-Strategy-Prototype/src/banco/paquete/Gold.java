@@ -22,7 +22,7 @@ public class Gold {
 	
 	public String toString() {
 		return "Paquete Gold \n" + "Titular: " + 
-	getTitular() +"\n" +"CA:" + getCajaAhorro() + "\n" + getTarjeta();
+				getTitular() +"\n" +"CA:" + getCajaAhorro() + "\n" + getTarjeta();
 	}
 	
 	public Tarjeta getTarjeta() {

@@ -14,18 +14,18 @@ public class LabDisenioFactory implements LaboratorioAbsFactory{
 	}
 	
 	@Override
-	public Lenguaje crearLenguaje(Lenguaje java) {
-		return new Java(java.getName(), java.getVersion());
+	public Lenguaje crearLenguaje(String nombre, String version) {
+		return new Java(nombre, version);
 	}
 
 	@Override
-	public SistemaOperativo crearSO(SistemaOperativo so) {
-		return new Windows(so.getName(), so.getVersion(), so.getAnio());
+	public SistemaOperativo crearSO(String nombre, String version, int anio) {
+		return new Windows(nombre, version, anio);
 	}
 	
 	@Override
-	public Ide crearIde() {
-		return new Idea();
+	public Ide crearIde(String nombre, String version) {
+		return new Idea(nombre, version);
 	}
 	
 	public static LabDisenioFactory getInstance() {
