@@ -1,6 +1,5 @@
 package com.laboratorio.test;
 
-import com.laboratorio.factory.LaboratorioAbsFactory;
 import com.laboratorio.ide.Ide;
 import com.laboratorio.lenguaje.Lenguaje;
 import com.laboratorio.sistemaOperativo.SistemaOperativo;

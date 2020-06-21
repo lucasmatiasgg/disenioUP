@@ -5,17 +5,11 @@ public class SoldadoFly implements JugadorFly{
 	private int ataque;
 	private int defensa;
 	
-	
 	public SoldadoFly() {
 		this.vidaTotal = 100;
 		this.ataque = 10;
 		this.defensa = 5;
 	}
-	
-	/*
-	public String toString() {
-		return "Vida total: " + getVidaTotal() + " Ataque: " + getAtaque() + " Defensa: " + getDefensa();
-	}*/
 	
 	@Override
 	public int getVidaTotal() {
@@ -46,5 +40,4 @@ public class SoldadoFly implements JugadorFly{
 		this.defensa = defensa;
 	}
 
-	
 }

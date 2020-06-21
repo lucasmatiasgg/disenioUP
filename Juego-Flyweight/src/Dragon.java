@@ -5,8 +5,8 @@ public class Dragon {
 	private int vidaActual;
 	private JugadorFly dragonFly;
 	
-	public Dragon(String key, FlyFactory factory) {
-		this.dragonFly = factory.getFly(key);
+	public Dragon(FlyFactory factory) {
+		this.dragonFly = factory.getFly(FlyFactory.DRAGON_200);
 		this.vidaActual = dragonFly.getVidaTotal();
 	}
 	
@@ -27,9 +27,11 @@ public class Dragon {
 	public void setPosY(int posY) {
 		this.posY = posY;
 	}
+
 	public int getVidaActual() {
 		return vidaActual;
 	}
+
 	public void setVidaActual(int vidaActual) {
 		this.vidaActual = vidaActual;
 	}

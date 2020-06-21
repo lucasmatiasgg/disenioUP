@@ -42,6 +42,7 @@ public class Test {
 		
 		
 		System.out.println(aulaDisenio);
+		System.out.println("=========================");
 		System.out.println(aulaComputacion);
 	}
 

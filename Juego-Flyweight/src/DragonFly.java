@@ -4,13 +4,8 @@ public class DragonFly implements JugadorFly{
 	private int vidaTotal;
 	private int ataque;
 	private int defensa;
-	private String clave;
 	
-	public DragonFly(){		
-	}
-	
-	public DragonFly(String clave) {
-		this.clave = clave;
+	public DragonFly() {
 		this.vidaTotal = 150;
 		this.ataque = 15;
 		this.defensa = 10;
@@ -40,15 +35,5 @@ public class DragonFly implements JugadorFly{
 	public void setDefensa(int defensa) {
 		this.defensa = defensa;
 	}
-	
-	public String getClave() {
-		return clave;
-	}
-	
-	public void setClave(String clave) {
-		this.clave = clave;
-	}
-	
-	
 
 }

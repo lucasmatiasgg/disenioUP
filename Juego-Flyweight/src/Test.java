@@ -14,31 +14,25 @@ public class Test {
 		
 		muestraSoldados(soldados);
 		muestraDragones(dragones);
-		
-		
-		
 
 	}
 
 	public static void makeSoldados(List<Soldado> soldados, int cantidad, FlyFactory factory) {
-		String keySoldado = "100";
 		Soldado soldado;
 		
 		for(int i=0; i<cantidad ; i++) {
-			soldado = new Soldado(keySoldado, factory);
+			soldado = new Soldado(factory);
 			soldado.setPosX(101+i);
 			soldado.setPosY(55+i);
 			soldados.add(soldado);
 		}
 	}
 	
-	
 	public static void makeDragones(List<Dragon> dragones, int cantidad, FlyFactory factory) {
-		String keyDragon = "200";
 		Dragon dragon;
 		
 		for(int i=0; i<3 ; i++) {
-			dragon = new Dragon(keyDragon, factory);
+			dragon = new Dragon(factory);
 			dragon.setPosX(201+i);
 			dragon.setPosY(90+i);
 			dragones.add(dragon);
