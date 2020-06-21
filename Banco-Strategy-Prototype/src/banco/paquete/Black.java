@@ -21,7 +21,7 @@ public class Black {
 		black.setTarjetaMaster(getTarjetaMaster().clone());
 		black.setTarjetaVisa(getTarjetaVisa().clone());
 		black.setCuentaCorriente(getCuentaCorriente().clone());
-		black.setTitular(""+getTitular());
+		black.setTitular(getTitular());
 		return black;
 	}
 

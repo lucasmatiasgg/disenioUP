@@ -10,6 +10,11 @@ public class Tarjeta {
 		
 	}
 	
+	public Tarjeta(String marca, int cod) {
+		this.marca = marca;
+		this.codigoSeguridad = cod;
+	}
+	
 	public Tarjeta clone() {
 		Tarjeta tc = new Tarjeta();
 		tc.setNumero(getNumero());

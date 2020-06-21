@@ -15,7 +15,7 @@ public class Gold {
 		
 		gold.setCajaAhorro(getCajaAhorro().clone());
 		gold.setTarjeta(getTarjeta().clone());
-		gold.setTitular(""+getTitular());
+		gold.setTitular(getTitular());
 		return gold;
 	}
 	

@@ -3,9 +3,9 @@ package banco.cuenta;
 public class Test {
 
 	public static void main(String[] args) {
-		Cuenta CA = new CajaAhorro();
-		Cuenta CC = new CuentaCorriente();
-		Cuenta CA2 = new CajaAhorro();
+		ICuenta CA = new CajaAhorro();
+		ICuenta CC = new CuentaCorriente();
+		ICuenta CA2 = new CajaAhorro();
 		
 		CA.setSaldo(1000.0);
 		CC.setSaldo(1000);

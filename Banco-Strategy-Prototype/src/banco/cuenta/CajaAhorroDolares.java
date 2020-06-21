@@ -1,6 +1,6 @@
 package banco.cuenta;
 
-public class CajaAhorroDolares implements Cuenta{
+public class CajaAhorroDolares implements ICuenta{
 	
 	private Double saldo;
 	
@@ -15,7 +15,7 @@ public class CajaAhorroDolares implements Cuenta{
 	}
 	
 	@Override
-	public void transferir(Cuenta destino, double monto) {
+	public void transferir(ICuenta destino, double monto) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -23,7 +23,11 @@ public class CajaAhorroDolares implements Cuenta{
 	@Override
 	public void setSaldo(double saldo) {
 		this.saldo = saldo;
-		
+	}
+	
+	@Override
+	public void setSaldo(double saldo, double monto) {
+		this.saldo = saldo;
 	}
 
 	@Override

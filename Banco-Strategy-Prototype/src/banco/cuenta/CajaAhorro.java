@@ -1,10 +1,11 @@
 package banco.cuenta;
 
-public class CajaAhorro implements Cuenta{
+public class CajaAhorro implements ICuenta{
 	
 	private Double saldo;
 	
 	public CajaAhorro() {
+		this.saldo = 0.0;
 	}
 	
 	public CajaAhorro clone() {
@@ -16,10 +17,10 @@ public class CajaAhorro implements Cuenta{
 	
 	
 	@Override
-	public void transferir(Cuenta destino, double monto) {
+	public void transferir(ICuenta destino, double monto) {
 		verificarSaldo(monto);
 		this.setSaldo(this.getSaldo() - monto);
-		destino.setSaldo(destino.getSaldo() + monto);
+		destino.setSaldo(destino.getSaldo(), monto);
 		
 	}
 	private void verificarSaldo(double monto) {
@@ -35,6 +36,11 @@ public class CajaAhorro implements Cuenta{
 	
 	@Override
 	public void setSaldo(double saldo) {
+		this.saldo = saldo;	
+	}
+	
+	@Override
+	public void setSaldo(double saldo, double monto) {
 		this.saldo = saldo;	
 	}
 

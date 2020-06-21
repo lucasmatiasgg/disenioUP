@@ -1,6 +1,6 @@
 package banco.cuenta;
 
-public class CuentaCorriente implements Cuenta{
+public class CuentaCorriente implements ICuenta{
 	
 	private double saldo;
 	private double porcentaje = 2;
@@ -15,7 +15,7 @@ public class CuentaCorriente implements Cuenta{
 		return cc;
 	}
 	@Override
-	public void transferir(Cuenta destino, double monto) {
+	public void transferir(ICuenta destino, double monto) {
 		verificarSaldo(monto);
 		double descuento = (monto * porcentaje) / 100;
 		saldo = saldo - monto - descuento;
@@ -30,6 +30,11 @@ public class CuentaCorriente implements Cuenta{
 
 	@Override
 	public void setSaldo(double saldo) {
+		this.saldo = saldo;	
+	}
+	
+	@Override
+	public void setSaldo(double saldo, double monto) {
 		this.saldo = saldo;	
 	}
 	@Override
